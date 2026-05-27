@@ -3,52 +3,55 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>BrightLane | Emergency Financial Options</title>
-  <meta name="description" content="Explore informational resources about emergency financial options and personal loan processes." />
+
+  <title>BrightLane | Financial Resource Hub & Educational Guides</title>
+
+  <meta name="description" content="BrightLane provides informational guides on emergency financial topics, personal loan concepts, credit-related education, and financial decision resources." />
+
+  <meta name="robots" content="index, follow" />
 
   <style>
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
-      background: #f5f7fb;
-      color: #111;
-    }
-
-    header {
-      background: #0b5fff;
-      color: white;
-      padding: 60px 20px;
-      text-align: center;
-    }
-
-    header h1 {
       margin: 0;
-      font-size: 40px;
-    }
-
-    header p {
-      margin-top: 10px;
-      opacity: 0.9;
+      background: #f6f7fb;
+      color: #111;
+      line-height: 1.6;
     }
 
     .container {
-      max-width: 900px;
+      max-width: 1100px;
       margin: auto;
       padding: 40px 20px;
     }
 
     .card {
       background: white;
-      padding: 25px;
-      margin-bottom: 20px;
+      padding: 30px;
       border-radius: 12px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+      margin-bottom: 20px;
     }
 
-    .btn {
+    h1 { font-size: 42px; }
+    h2 { margin-top: 30px; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 15px;
+    }
+
+    .box {
+      background: #f1f5ff;
+      padding: 18px;
+      border-radius: 10px;
+    }
+
+    a.button {
       display: inline-block;
-      margin-top: 15px;
-      padding: 12px 18px;
+      margin-top: 10px;
+      padding: 12px 16px;
       background: #0b5fff;
       color: white;
       text-decoration: none;
@@ -56,57 +59,156 @@
       font-weight: bold;
     }
 
-    .btn:hover {
+    a.button:hover {
       background: #094ad1;
     }
 
+    .cta {
+      background: #111;
+    }
+
+    .small {
+      font-size: 13px;
+      color: #555;
+    }
+
+    .faq h3 {
+      margin-bottom: 5px;
+    }
+
     footer {
-      text-align: center;
-      padding: 30px;
       font-size: 12px;
       color: #666;
+      text-align: center;
+      margin-top: 40px;
     }
   </style>
 </head>
 
 <body>
 
-<header>
-  <h1>BrightLane</h1>
-  <p>Explore Emergency Financial Options & Loan Resources</p>
-</header>
-
 <div class="container">
 
+  <!-- HERO -->
   <div class="card">
-    <h2>Need Money Fast?</h2>
-    <p>Explore emergency financial options that may help in urgent situations.</p>
-    <a class="btn" href="/need-money-fast/">Get Started</a>
+    <h1>BrightLane Financial Resource Hub</h1>
+
+    <p>
+      BrightLane is an informational website providing educational content about personal finance topics,
+      including emergency expenses, credit-related guidance, and general loan concepts.
+    </p>
+
+    <a class="button cta" href="/apply-maxlend-now/">
+      Check Eligibility Options
+    </a>
+
+    <p class="small">
+      Informational only. No financial services provided directly.
+    </p>
   </div>
 
+  <!-- CONTENT HUB -->
   <div class="card">
-    <h2>Bad Credit Options</h2>
-    <p>Learn about options that may be available with different credit backgrounds.</p>
-    <a class="btn" href="/bad-credit-loans/">Check Options</a>
+    <h2>Explore Financial Topics</h2>
+
+    <div class="grid">
+
+      <div class="box">
+        <strong>Emergency Cash Situations</strong>
+        <p>Learn about common financial emergencies and how people explore short-term solutions.</p>
+        <a class="button" href="/need-cash-fast/">Read Guide</a>
+      </div>
+
+      <div class="box">
+        <strong>Bad Credit Information</strong>
+        <p>Educational overview of what lenders may consider beyond credit scores.</p>
+        <a class="button" href="/bad-credit-loan-options/">Read Guide</a>
+      </div>
+
+      <div class="box">
+        <strong>No Credit Check Topics</strong>
+        <p>General explanation of eligibility-based lending concepts.</p>
+        <a class="button" href="/no-credit-check-loan-options/">Read Guide</a>
+      </div>
+
+      <div class="box">
+        <strong>Loan Rejection Guidance</strong>
+        <p>What people typically consider after a denied application.</p>
+        <a class="button" href="/loan-rejected-what-now/">Read Guide</a>
+      </div>
+
+      <div class="box">
+        <strong>Quick Personal Loans</strong>
+        <p>Information about fast online application processes and timelines.</p>
+        <a class="button" href="/quick-personal-loans/">Read Guide</a>
+      </div>
+
+      <div class="box">
+        <strong>Personal Loan Overview</strong>
+        <p>General educational breakdown of how personal loans work.</p>
+        <a class="button" href="/personal-loans-today/">Read Guide</a>
+      </div>
+
+    </div>
   </div>
 
+  <!-- EDUCATIONAL SECTION -->
   <div class="card">
-    <h2>Apply / Check Eligibility</h2>
-    <p>Go directly to eligibility and review available offers.</p>
-    
-    <!-- THIS IS THE MONEY LINK -->
-    <a class="btn" 
-       href="https://www.linkconnector.com/ta.php?lc=007949096598005765&atid=MaxlendWebApplyMaxlend"
-       target="_blank">
-       Continue
+    <h2>How Online Loan Information Works</h2>
+
+    <p>
+      Many users research financial options online before making decisions.
+      These informational resources help explain general processes, eligibility concepts,
+      and typical steps involved in submitting an online request.
+    </p>
+
+    <ul>
+      <li>Online application forms are typically short and basic</li>
+      <li>Eligibility may depend on income, credit history, and other factors</li>
+      <li>Different providers may show different results based on criteria</li>
+    </ul>
+
+    <a class="button cta" href="/apply-maxlend-now/">
+      Continue to Eligibility Check
     </a>
   </div>
 
-</div>
+  <!-- FAQ -->
+  <div class="card faq">
+    <h2>Frequently Asked Questions</h2>
 
-<footer>
-  © 2026 BrightLane. Informational only. Not a lender or financial provider.
-</footer>
+    <h3>Is BrightLane a lender?</h3>
+    <p>No. BrightLane is an informational resource website only.</p>
+
+    <h3>Do I apply for loans here?</h3>
+    <p>No. Users are redirected to third-party providers for applications.</p>
+
+    <h3>Why do you link to external sites?</h3>
+    <p>We provide informational content and direct users to external financial service providers if they choose to continue.</p>
+
+    <h3>Is there any guarantee of approval?</h3>
+    <p>No. Approval depends entirely on third-party provider requirements.</p>
+  </div>
+
+  <!-- FINAL CTA -->
+  <div class="card">
+    <h2>Check Available Options</h2>
+
+    <p>
+      If you want to explore eligibility-based options, you can continue through a simple online process.
+    </p>
+
+    <a class="button cta" href="/apply-maxlend-now/">
+      Start Eligibility Check
+    </a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2026 BrightLane. All rights reserved. Informational content only. Not a lender or financial provider.
+  </footer>
+
+</div>
 
 </body>
 </html>
