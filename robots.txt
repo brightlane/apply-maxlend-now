@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+
+# Allow all SEO pages and funnel structure
+Allow: /apply-maxlend-now/
+Allow: /bad-credit-loan-options/
+Allow: /cash-advance-alternatives/
+Allow: /emergency-loan-options/
+Allow: /loan-rejected/
+Allow: /no-credit-check-loans/
+Allow: /personal-loans-today/
+Allow: /quick-personal-loans/
+
+# Block nothing critical (keep full crawl access)
+Disallow:
+
+# Sitemap (IMPORTANT - add this once you create sitemap.xml)
+Sitemap: https://brightlane.github.io/sitemap.xml
