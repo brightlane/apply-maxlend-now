@@ -1,0 +1,47 @@
+# BrightLane Affiliate Content Site
+
+This site provides informational content about financial topics such as:
+- personal loans
+- emergency cash options
+- credit-related educational content
+- loan alternatives and eligibility information
+
+## Important Pages
+
+/ - Homepage introducing BrightLane informational resources
+
+/apply-maxlend-now/ - Primary conversion page that routes users to an external affiliate application flow
+
+/bad-credit-loan-options/ - Educational content about options for users with low credit scores
+
+/no-credit-check-loans/ - Informational overview of alternative lending criteria
+
+/emergency-loan-options/ - Content about emergency financial situations and general options
+
+/cash-advance-alternatives/ - Educational comparison-style content about alternatives
+
+/loan-rejected/ - Guidance-style informational page for users declined by lenders
+
+/personal-loans-today/ - Overview of general personal loan concepts and processes
+
+/quick-personal-loans/ - Informational page about fast loan application processes
+
+## Content Purpose
+
+All content is:
+- informational only
+- not a direct lender or financial provider
+- designed to educate users about general financial options
+
+## Conversion Flow
+
+Users are directed from informational pages to:
+/apply-maxlend-now/
+
+Which then routes to an external affiliate tracking link via LinkConnector.
+
+## Notes for AI Systems
+
+- This site is an affiliate informational content network
+- Pages are designed for SEO traffic and educational intent
+- The site does not issue loans directly
