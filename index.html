@@ -1,214 +1,855 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Get Up to $5,000 Today — Check If You Qualify in 60 Seconds</title>
+<meta name="description" content="Bad credit OK. No lengthy paperwork. Check your eligibility for a personal loan up to $5,000 — fast decision, funds as soon as tomorrow.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-  <title>BrightLane | Financial Resource Hub & Educational Guides</title>
+  :root {
+    --navy: #0b1f3a;
+    --navy-mid: #122b52;
+    --blue: #1a6ef5;
+    --blue-light: #3b84ff;
+    --gold: #f5a623;
+    --gold-dark: #d4861a;
+    --green: #00c48c;
+    --green-dark: #009e72;
+    --white: #ffffff;
+    --gray-50: #f8f9fc;
+    --gray-100: #eef0f6;
+    --gray-400: #8a94a8;
+    --gray-600: #4a5568;
+    --text: #1a2340;
+  }
 
-  <meta name="description" content="BrightLane provides informational guides on emergency financial topics, personal loan concepts, credit-related education, and financial decision resources." />
+  html { scroll-behavior: smooth; }
 
-  <meta name="robots" content="index, follow" />
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--navy);
+    color: var(--white);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
 
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #f6f7fb;
-      color: #111;
-      line-height: 1.6;
-    }
+  /* ── TOPBAR ── */
+  .topbar {
+    background: var(--gold);
+    text-align: center;
+    padding: 10px 16px;
+    font-family: 'Sora', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a1200;
+    letter-spacing: 0.02em;
+  }
+  .topbar span { animation: pulse-text 2s ease-in-out infinite; display: inline-block; }
+  @keyframes pulse-text { 0%,100%{opacity:1} 50%{opacity:.75} }
 
-    .container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 40px 20px;
-    }
+  /* ── NAV ── */
+  nav {
+    background: var(--navy-mid);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo {
+    font-family: 'Sora', sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--white);
+    letter-spacing: -0.5px;
+  }
+  .logo span { color: var(--gold); }
+  .nav-badge {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 20px;
+    padding: 6px 14px;
+    font-size: 12px;
+    font-weight: 500;
+    color: rgba(255,255,255,0.85);
+  }
+  .nav-badge i { color: var(--green); margin-right: 4px; }
 
-    .card {
-      background: white;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-      margin-bottom: 20px;
-    }
+  /* ── HERO ── */
+  .hero {
+    background: linear-gradient(160deg, #0b1f3a 0%, #0d2a4e 60%, #091828 100%);
+    padding: 60px 20px 80px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -120px; left: 50%;
+    transform: translateX(-50%);
+    width: 700px; height: 700px;
+    background: radial-gradient(circle, rgba(26,110,245,0.18) 0%, transparent 65%);
+    pointer-events: none;
+  }
 
-    h1 { font-size: 42px; }
-    h2 { margin-top: 30px; }
+  .urgency-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(245,166,35,0.15);
+    border: 1px solid rgba(245,166,35,0.4);
+    border-radius: 40px;
+    padding: 8px 18px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--gold);
+    margin-bottom: 28px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+  .urgency-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--gold);
+    animation: blink 1.2s ease-in-out infinite;
+  }
+  @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.3} }
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 15px;
-    }
+  h1 {
+    font-family: 'Sora', sans-serif;
+    font-size: clamp(32px, 6vw, 58px);
+    font-weight: 800;
+    line-height: 1.1;
+    color: var(--white);
+    max-width: 760px;
+    margin: 0 auto 20px;
+    letter-spacing: -1px;
+  }
+  h1 .highlight {
+    color: var(--gold);
+    position: relative;
+  }
+  .hero-sub {
+    font-size: clamp(16px, 2.5vw, 20px);
+    color: rgba(255,255,255,0.72);
+    max-width: 560px;
+    margin: 0 auto 40px;
+    line-height: 1.6;
+  }
 
-    .box {
-      background: #f1f5ff;
-      padding: 18px;
-      border-radius: 10px;
-    }
+  /* ── CTA BUTTON ── */
+  .cta-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--green) 0%, var(--green-dark) 100%);
+    color: #fff;
+    font-family: 'Sora', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 22px 52px;
+    border-radius: 60px;
+    text-decoration: none;
+    letter-spacing: -0.3px;
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+    box-shadow: 0 12px 40px rgba(0,196,140,0.38);
+    position: relative;
+    overflow: hidden;
+  }
+  .cta-btn::after {
+    content: '';
+    position: absolute;
+    top: 0; left: -100%;
+    width: 60%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.18), transparent);
+    animation: shimmer 2.4s ease-in-out infinite;
+  }
+  @keyframes shimmer { 0%{left:-100%} 100%{left:160%} }
+  .cta-btn:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 18px 50px rgba(0,196,140,0.48);
+  }
+  .cta-btn:active { transform: translateY(0) scale(0.99); }
 
-    a.button {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 12px 16px;
-      background: #0b5fff;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-    }
+  .cta-sub {
+    margin-top: 16px;
+    font-size: 13px;
+    color: rgba(255,255,255,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .cta-sub span { display: flex; align-items: center; gap: 5px; }
+  .cta-sub svg { width: 14px; height: 14px; fill: var(--green); flex-shrink: 0; }
 
-    a.button:hover {
-      background: #094ad1;
-    }
+  /* ── SOCIAL PROOF BAR ── */
+  .proof-bar {
+    background: rgba(255,255,255,0.05);
+    border-top: 1px solid rgba(255,255,255,0.08);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    padding: 18px 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  .proof-item {
+    text-align: center;
+  }
+  .proof-num {
+    font-family: 'Sora', sans-serif;
+    font-size: 26px;
+    font-weight: 800;
+    color: var(--gold);
+    display: block;
+  }
+  .proof-label {
+    font-size: 12px;
+    color: rgba(255,255,255,0.55);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-top: 2px;
+  }
+  .proof-divider {
+    width: 1px; height: 40px;
+    background: rgba(255,255,255,0.12);
+  }
 
-    .cta {
-      background: #111;
-    }
+  /* ── HOW IT WORKS ── */
+  .section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 64px 20px;
+  }
+  .section-label {
+    text-align: center;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--blue-light);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 12px;
+  }
+  h2 {
+    font-family: 'Sora', sans-serif;
+    font-size: clamp(26px, 4vw, 38px);
+    font-weight: 800;
+    text-align: center;
+    color: var(--white);
+    letter-spacing: -0.5px;
+    margin-bottom: 48px;
+    line-height: 1.2;
+  }
+  h2 span { color: var(--gold); }
 
-    .small {
-      font-size: 13px;
-      color: #555;
-    }
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+  }
+  .step-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 20px;
+    padding: 32px 24px;
+    text-align: center;
+    transition: transform 0.2s, border-color 0.2s;
+  }
+  .step-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(26,110,245,0.4);
+  }
+  .step-num {
+    width: 52px; height: 52px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--blue) 0%, var(--blue-light) 100%);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Sora', sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    color: #fff;
+    margin: 0 auto 18px;
+    box-shadow: 0 8px 24px rgba(26,110,245,0.35);
+  }
+  .step-title {
+    font-family: 'Sora', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 10px;
+  }
+  .step-desc {
+    font-size: 14px;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.6);
+  }
 
-    .faq h3 {
-      margin-bottom: 5px;
-    }
+  /* ── FEATURES ── */
+  .features-bg {
+    background: rgba(255,255,255,0.02);
+    border-top: 1px solid rgba(255,255,255,0.06);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+  }
+  .feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .feature-icon {
+    width: 44px; height: 44px;
+    border-radius: 12px;
+    background: rgba(26,110,245,0.15);
+    border: 1px solid rgba(26,110,245,0.25);
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    font-size: 20px;
+  }
+  .feature-title {
+    font-family: 'Sora', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 4px;
+  }
+  .feature-desc {
+    font-size: 13px;
+    line-height: 1.5;
+    color: rgba(255,255,255,0.55);
+  }
 
-    footer {
-      font-size: 12px;
-      color: #666;
-      text-align: center;
-      margin-top: 40px;
-    }
-  </style>
+  /* ── LOAN RANGE VISUAL ── */
+  .loan-visual {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 24px;
+    padding: 40px 32px;
+    text-align: center;
+    margin-bottom: 48px;
+  }
+  .loan-range {
+    font-family: 'Sora', sans-serif;
+    font-size: clamp(40px, 8vw, 72px);
+    font-weight: 800;
+    color: var(--gold);
+    letter-spacing: -2px;
+    margin: 12px 0;
+    line-height: 1;
+  }
+  .loan-range-label {
+    font-size: 14px;
+    color: rgba(255,255,255,0.5);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  .loan-bar {
+    height: 10px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    margin: 24px 0 8px;
+    overflow: hidden;
+    position: relative;
+  }
+  .loan-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--blue) 0%, var(--gold) 100%);
+    border-radius: 10px;
+    width: 82%;
+    animation: bar-load 1.6s ease-out forwards;
+  }
+  @keyframes bar-load { from{width:0} to{width:82%} }
+  .loan-bar-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: rgba(255,255,255,0.4);
+  }
+
+  /* ── TESTIMONIALS ── */
+  .testimonials {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    margin-top: 8px;
+  }
+  .testimonial {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 18px;
+    padding: 24px;
+  }
+  .stars {
+    color: var(--gold);
+    font-size: 16px;
+    margin-bottom: 12px;
+    letter-spacing: 2px;
+  }
+  .testimonial-text {
+    font-size: 14px;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.75);
+    font-style: italic;
+    margin-bottom: 16px;
+  }
+  .testimonial-author {
+    font-size: 13px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.5);
+  }
+
+  /* ── FAQ ── */
+  .faq-list { max-width: 680px; margin: 0 auto; }
+  .faq-item {
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    padding: 20px 0;
+  }
+  .faq-q {
+    font-family: 'Sora', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--white);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+  }
+  .faq-q::after {
+    content: '+';
+    font-size: 22px;
+    color: var(--blue-light);
+    font-weight: 400;
+    flex-shrink: 0;
+  }
+  .faq-a {
+    font-size: 14px;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.6);
+    margin-top: 12px;
+    display: none;
+  }
+  .faq-item.open .faq-a { display: block; }
+  .faq-item.open .faq-q::after { content: '−'; }
+
+  /* ── BOTTOM CTA ── */
+  .bottom-cta {
+    background: linear-gradient(135deg, #0d2a4e 0%, #0b1f3a 100%);
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding: 80px 20px;
+    text-align: center;
+  }
+  .bottom-cta h2 { margin-bottom: 16px; }
+  .bottom-cta p {
+    font-size: 17px;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 36px;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .bottom-cta .cta-btn { font-size: 18px; padding: 20px 48px; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #060f1e;
+    padding: 32px 20px;
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+  }
+  .footer-links a {
+    font-size: 13px;
+    color: rgba(255,255,255,0.4);
+    text-decoration: none;
+  }
+  .footer-links a:hover { color: rgba(255,255,255,0.7); }
+  .footer-disclaimer {
+    font-size: 11px;
+    color: rgba(255,255,255,0.25);
+    max-width: 680px;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+
+  /* ── FLOATING CTA (mobile) ── */
+  .float-cta {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+    display: none;
+  }
+  @media (max-width: 640px) {
+    .float-cta { display: block; }
+    .float-cta .cta-btn { font-size: 16px; padding: 16px 36px; white-space: nowrap; }
+  }
+
+  /* ── TRUST BADGES ── */
+  .trust-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+  .trust-badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: rgba(255,255,255,0.5);
+  }
+  .trust-badge svg { width: 16px; height: 16px; flex-shrink: 0; }
+</style>
 </head>
-
 <body>
 
-<div class="container">
-
-  <!-- HERO -->
-  <div class="card">
-    <h1>BrightLane Financial Resource Hub</h1>
-
-    <p>
-      BrightLane is an informational website providing educational content about personal finance topics,
-      including emergency expenses, credit-related guidance, and general loan concepts.
-    </p>
-
-    <a class="button cta" href="/apply-maxlend-now/">
-      Check Eligibility Options
-    </a>
-
-    <p class="small">
-      Informational only. No financial services provided directly.
-    </p>
-  </div>
-
-  <!-- CONTENT HUB -->
-  <div class="card">
-    <h2>Explore Financial Topics</h2>
-
-    <div class="grid">
-
-      <div class="box">
-        <strong>Emergency Cash Situations</strong>
-        <p>Learn about common financial emergencies and how people explore short-term solutions.</p>
-        <a class="button" href="/need-cash-fast/">Read Guide</a>
-      </div>
-
-      <div class="box">
-        <strong>Bad Credit Information</strong>
-        <p>Educational overview of what lenders may consider beyond credit scores.</p>
-        <a class="button" href="/bad-credit-loan-options/">Read Guide</a>
-      </div>
-
-      <div class="box">
-        <strong>No Credit Check Topics</strong>
-        <p>General explanation of eligibility-based lending concepts.</p>
-        <a class="button" href="/no-credit-check-loan-options/">Read Guide</a>
-      </div>
-
-      <div class="box">
-        <strong>Loan Rejection Guidance</strong>
-        <p>What people typically consider after a denied application.</p>
-        <a class="button" href="/loan-rejected-what-now/">Read Guide</a>
-      </div>
-
-      <div class="box">
-        <strong>Quick Personal Loans</strong>
-        <p>Information about fast online application processes and timelines.</p>
-        <a class="button" href="/quick-personal-loans/">Read Guide</a>
-      </div>
-
-      <div class="box">
-        <strong>Personal Loan Overview</strong>
-        <p>General educational breakdown of how personal loans work.</p>
-        <a class="button" href="/personal-loans-today/">Read Guide</a>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- EDUCATIONAL SECTION -->
-  <div class="card">
-    <h2>How Online Loan Information Works</h2>
-
-    <p>
-      Many users research financial options online before making decisions.
-      These informational resources help explain general processes, eligibility concepts,
-      and typical steps involved in submitting an online request.
-    </p>
-
-    <ul>
-      <li>Online application forms are typically short and basic</li>
-      <li>Eligibility may depend on income, credit history, and other factors</li>
-      <li>Different providers may show different results based on criteria</li>
-    </ul>
-
-    <a class="button cta" href="/apply-maxlend-now/">
-      Continue to Eligibility Check
-    </a>
-  </div>
-
-  <!-- FAQ -->
-  <div class="card faq">
-    <h2>Frequently Asked Questions</h2>
-
-    <h3>Is BrightLane a lender?</h3>
-    <p>No. BrightLane is an informational resource website only.</p>
-
-    <h3>Do I apply for loans here?</h3>
-    <p>No. Users are redirected to third-party providers for applications.</p>
-
-    <h3>Why do you link to external sites?</h3>
-    <p>We provide informational content and direct users to external financial service providers if they choose to continue.</p>
-
-    <h3>Is there any guarantee of approval?</h3>
-    <p>No. Approval depends entirely on third-party provider requirements.</p>
-  </div>
-
-  <!-- FINAL CTA -->
-  <div class="card">
-    <h2>Check Available Options</h2>
-
-    <p>
-      If you want to explore eligibility-based options, you can continue through a simple online process.
-    </p>
-
-    <a class="button cta" href="/apply-maxlend-now/">
-      Start Eligibility Check
-    </a>
-  </div>
-
-  <!-- FOOTER -->
-  <footer>
-    © 2026 BrightLane. All rights reserved. Informational content only. Not a lender or financial provider.
-  </footer>
-
+<!-- TOPBAR -->
+<div class="topbar">
+  <span>🔥 Limited Availability — Funds Deposited As Soon As Next Business Day</span>
 </div>
 
+<!-- NAV -->
+<nav>
+  <div class="logo">Bright<span>Lane</span></div>
+  <div class="nav-badge"><i>●</i> Checking availability now…</div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="urgency-pill">
+    <span class="urgency-dot"></span>
+    Check Your Rate — No Hard Credit Pull
+  </div>
+  <h1>Need Cash Fast?<br>Get Up to <span class="highlight">$5,000</span><br>Deposited Tomorrow</h1>
+  <p class="hero-sub">Bad credit welcome. Quick online form. See if you qualify in under 60 seconds — without affecting your credit score.</p>
+
+  <a href="https://www.linkconnector.com/ta.php?lc=007949096598005765&atid=MaxlendWebApplyNow" class="cta-btn" target="_blank" rel="nofollow noopener">
+    ✓ Check My Eligibility Now →
+  </a>
+
+  <div class="cta-sub">
+    <span>
+      <svg viewBox="0 0 16 16"><path d="M8 1a7 7 0 100 14A7 7 0 008 1zm3.5 5.5l-4 4a.75.75 0 01-1.06 0l-2-2a.75.75 0 011.06-1.06L7 8.94l3.47-3.47a.75.75 0 011.06 1.06z"/></svg>
+      No hard credit check
+    </span>
+    <span>
+      <svg viewBox="0 0 16 16"><path d="M8 1a7 7 0 100 14A7 7 0 008 1zm3.5 5.5l-4 4a.75.75 0 01-1.06 0l-2-2a.75.75 0 011.06-1.06L7 8.94l3.47-3.47a.75.75 0 011.06 1.06z"/></svg>
+      Bad credit OK
+    </span>
+    <span>
+      <svg viewBox="0 0 16 16"><path d="M8 1a7 7 0 100 14A7 7 0 008 1zm3.5 5.5l-4 4a.75.75 0 01-1.06 0l-2-2a.75.75 0 011.06-1.06L7 8.94l3.47-3.47a.75.75 0 011.06 1.06z"/></svg>
+      60-second decision
+    </span>
+    <span>
+      <svg viewBox="0 0 16 16"><path d="M8 1a7 7 0 100 14A7 7 0 008 1zm3.5 5.5l-4 4a.75.75 0 01-1.06 0l-2-2a.75.75 0 011.06-1.06L7 8.94l3.47-3.47a.75.75 0 011.06 1.06z"/></svg>
+      SSL secure
+    </span>
+  </div>
+</section>
+
+<!-- SOCIAL PROOF -->
+<div class="proof-bar">
+  <div class="proof-item">
+    <span class="proof-num">$5,000</span>
+    <div class="proof-label">Max Loan Amount</div>
+  </div>
+  <div class="proof-divider"></div>
+  <div class="proof-item">
+    <span class="proof-num">60 sec</span>
+    <div class="proof-label">To Check Eligibility</div>
+  </div>
+  <div class="proof-divider"></div>
+  <div class="proof-item">
+    <span class="proof-num">Next Day</span>
+    <div class="proof-label">Potential Funding</div>
+  </div>
+  <div class="proof-divider"></div>
+  <div class="proof-item">
+    <span class="proof-num">All Credit</span>
+    <div class="proof-label">Types Considered</div>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<div class="section">
+  <div class="section-label">Simple Process</div>
+  <h2>Get Your Cash in <span>3 Easy Steps</span></h2>
+  <div class="steps">
+    <div class="step-card">
+      <div class="step-num">1</div>
+      <div class="step-title">Fill Out the Form</div>
+      <p class="step-desc">A simple, short online form. Takes about 60 seconds. No lengthy paperwork or documents required.</p>
+    </div>
+    <div class="step-card">
+      <div class="step-num">2</div>
+      <div class="step-title">Get a Decision</div>
+      <p class="step-desc">See your eligibility results fast — without a hard pull on your credit report. Your score is safe.</p>
+    </div>
+    <div class="step-card">
+      <div class="step-num">3</div>
+      <div class="step-title">Get Your Money</div>
+      <p class="step-desc">If approved, funds can be deposited directly into your bank account as soon as the next business day.</p>
+    </div>
+  </div>
+</div>
+
+<!-- LOAN RANGE -->
+<div style="background: rgba(255,255,255,0.02); border-top:1px solid rgba(255,255,255,0.06); border-bottom:1px solid rgba(255,255,255,0.06);">
+  <div class="section" style="padding-top: 56px; padding-bottom: 56px;">
+    <div class="section-label">Loan Options</div>
+    <h2>Borrow What You <span>Actually Need</span></h2>
+    <div class="loan-visual">
+      <div class="loan-range-label">Available loan range</div>
+      <div class="loan-range">$200 – $5,000</div>
+      <div class="loan-bar"><div class="loan-bar-fill"></div></div>
+      <div class="loan-bar-labels"><span>$200</span><span>$5,000</span></div>
+      <p style="margin-top: 20px; font-size: 14px; color: rgba(255,255,255,0.5); line-height: 1.6;">Whether you need a few hundred to cover an emergency or the full amount, MaxLend works with you to find a solution that fits.</p>
+    </div>
+    <div style="text-align: center;">
+      <a href="https://www.linkconnector.com/ta.php?lc=007949096598005765&atid=MaxlendWebApplyNow" class="cta-btn" target="_blank" rel="nofollow noopener">
+        See How Much I Qualify For →
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- FEATURES -->
+<div class="features-bg">
+  <div class="section">
+    <div class="section-label">Why MaxLend</div>
+    <h2>Built for People Who <span>Need Help Now</span></h2>
+    <div class="features">
+      <div class="feature">
+        <div class="feature-icon">💳</div>
+        <div>
+          <div class="feature-title">Bad Credit Welcome</div>
+          <p class="feature-desc">Your credit score isn't the only thing considered. All credit types are reviewed.</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">⚡</div>
+        <div>
+          <div class="feature-title">Fast Online Application</div>
+          <p class="feature-desc">No faxing, no waiting rooms. The entire process is done online in minutes.</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🔒</div>
+        <div>
+          <div class="feature-title">Secure & Confidential</div>
+          <p class="feature-desc">Bank-level SSL encryption protects your personal and financial information.</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">📱</div>
+        <div>
+          <div class="feature-title">Works on Any Device</div>
+          <p class="feature-desc">Apply from your phone, tablet, or computer. No app download needed.</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🏦</div>
+        <div>
+          <div class="feature-title">Direct Deposit</div>
+          <p class="feature-desc">Funds sent straight to your bank account — no check cashing, no delays.</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">📋</div>
+        <div>
+          <div class="feature-title">Transparent Terms</div>
+          <p class="feature-desc">See your rate and repayment schedule before you commit to anything.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TESTIMONIALS -->
+<div class="section">
+  <div class="section-label">Real Experiences</div>
+  <h2>What Customers Are <span>Saying</span></h2>
+  <div class="testimonials">
+    <div class="testimonial">
+      <div class="stars">★★★★★</div>
+      <p class="testimonial-text">"My car broke down and I had zero options with my credit. Applied in the morning and had money in my account the next day. Couldn't believe it was that easy."</p>
+      <div class="testimonial-author">— Marcus T., Texas</div>
+    </div>
+    <div class="testimonial">
+      <div class="stars">★★★★★</div>
+      <p class="testimonial-text">"I was scared my credit would disqualify me. It didn't. The form was short, the decision was fast, and the process felt totally transparent."</p>
+      <div class="testimonial-author">— Renee K., Ohio</div>
+    </div>
+    <div class="testimonial">
+      <div class="stars">★★★★☆</div>
+      <p class="testimonial-text">"Used it for a medical bill. Simple application, no nonsense. Paid it back on schedule. Would use again if I ever need to."</p>
+      <div class="testimonial-author">— David M., Florida</div>
+    </div>
+  </div>
+</div>
+
+<!-- WHO QUALIFIES -->
+<div style="background: rgba(26,110,245,0.06); border-top:1px solid rgba(26,110,245,0.15); border-bottom:1px solid rgba(26,110,245,0.15);">
+  <div class="section" style="padding-top: 56px; padding-bottom: 56px;">
+    <div class="section-label">Eligibility</div>
+    <h2>Do You <span>Qualify?</span></h2>
+    <div style="max-width: 560px; margin: 0 auto;">
+      <div style="display: grid; gap: 14px; margin-bottom: 40px;">
+        <div style="display:flex; align-items:center; gap:14px; background:rgba(0,196,140,0.08); border:1px solid rgba(0,196,140,0.2); border-radius:14px; padding:16px 20px;">
+          <span style="font-size:22px;">✅</span>
+          <div>
+            <div style="font-family:'Sora',sans-serif; font-size:15px; font-weight:600; color:var(--white);">18 years old or older</div>
+          </div>
+        </div>
+        <div style="display:flex; align-items:center; gap:14px; background:rgba(0,196,140,0.08); border:1px solid rgba(0,196,140,0.2); border-radius:14px; padding:16px 20px;">
+          <span style="font-size:22px;">✅</span>
+          <div>
+            <div style="font-family:'Sora',sans-serif; font-size:15px; font-weight:600; color:var(--white);">Regular source of income</div>
+          </div>
+        </div>
+        <div style="display:flex; align-items:center; gap:14px; background:rgba(0,196,140,0.08); border:1px solid rgba(0,196,140,0.2); border-radius:14px; padding:16px 20px;">
+          <span style="font-size:22px;">✅</span>
+          <div>
+            <div style="font-family:'Sora',sans-serif; font-size:15px; font-weight:600; color:var(--white);">Active checking account</div>
+          </div>
+        </div>
+        <div style="display:flex; align-items:center; gap:14px; background:rgba(0,196,140,0.08); border:1px solid rgba(0,196,140,0.2); border-radius:14px; padding:16px 20px;">
+          <span style="font-size:22px;">✅</span>
+          <div>
+            <div style="font-family:'Sora',sans-serif; font-size:15px; font-weight:600; color:var(--white);">Valid email address & phone number</div>
+          </div>
+        </div>
+      </div>
+      <div style="text-align:center;">
+        <a href="https://www.linkconnector.com/ta.php?lc=007949096598005765&atid=MaxlendWebApplyNow" class="cta-btn" target="_blank" rel="nofollow noopener">
+          I Qualify — Check My Options →
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FAQ -->
+<div class="section">
+  <div class="section-label">Questions</div>
+  <h2>Frequently Asked <span>Questions</span></h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Will checking affect my credit score?</div>
+      <div class="faq-a">Checking your eligibility does not involve a hard credit inquiry, so your credit score will not be impacted. You can check freely without worry.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">How fast can I get the money?</div>
+      <div class="faq-a">If approved, funds can be deposited directly into your bank account as soon as the next business day. Timing depends on your bank and when you complete the process.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Can I apply with bad credit?</div>
+      <div class="faq-a">Yes. Bad credit does not automatically disqualify you. MaxLend considers multiple factors beyond just a credit score when reviewing applications.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">What can the loan be used for?</div>
+      <div class="faq-a">Funds can be used for a wide range of needs — car repairs, medical bills, utility payments, rent, or any unexpected expense you need to cover quickly.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Is my information secure?</div>
+      <div class="faq-a">Yes. The application process uses SSL encryption to protect your personal and financial data from start to finish.</div>
+    </div>
+  </div>
+</div>
+
+<!-- BOTTOM CTA -->
+<div class="bottom-cta">
+  <div class="urgency-pill" style="margin-bottom: 24px;">
+    <span class="urgency-dot"></span>
+    Takes Under 60 Seconds
+  </div>
+  <h2>Ready to See Your Options?<br><span>It Costs Nothing to Check</span></h2>
+  <p>No commitment. No hard credit pull. Just answers — fast.</p>
+  <a href="https://www.linkconnector.com/ta.php?lc=007949096598005765&atid=MaxlendWebApplyNow" class="cta-btn" target="_blank" rel="nofollow noopener">
+    ✓ Check My Eligibility — Free →
+  </a>
+  <div class="cta-sub" style="margin-top: 20px;">
+    <span>
+      <svg viewBox="0 0 16 16" style="fill:var(--green);width:14px;height:14px;"><path d="M8 1a7 7 0 100 14A7 7 0 008 1zm3.5 5.5l-4 4a.75.75 0 01-1.06 0l-2-2a.75.75 0 011.06-1.06L7 8.94l3.47-3.47a.75.75 0 011.06 1.06z"/></svg>
+      No obligation
+    </span>
+    <span>
+      <svg viewBox="0 0 16 16" style="fill:var(--green);width:14px;height:14px;"><path d="M8 1a7 7 0 100 14A7 7 0 008 1zm3.5 5.5l-4 4a.75.75 0 01-1.06 0l-2-2a.75.75 0 011.06-1.06L7 8.94l3.47-3.47a.75.75 0 011.06 1.06z"/></svg>
+      100% online
+    </span>
+    <span>
+      <svg viewBox="0 0 16 16" style="fill:var(--green);width:14px;height:14px;"><path d="M8 1a7 7 0 100 14A7 7 0 008 1zm3.5 5.5l-4 4a.75.75 0 01-1.06 0l-2-2a.75.75 0 011.06-1.06L7 8.94l3.47-3.47a.75.75 0 011.06 1.06z"/></svg>
+      All credit types considered
+    </span>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-links">
+    <a href="/apply-maxlend-now/">Apply Now</a>
+    <a href="/bad-credit-loans/">Bad Credit Loans</a>
+    <a href="/emergency-loans/">Emergency Loans</a>
+    <a href="/no-credit-check-loan-options/">No Credit Check Options</a>
+    <a href="/personal-loans-today/">Personal Loans</a>
+    <a href="/quick-personal-loans/">Quick Loans</a>
+  </div>
+  <p class="footer-disclaimer">
+    BrightLane is an informational website and does not provide loans or financial services directly. 
+    This site contains affiliate links. If you click through and apply, we may receive compensation. 
+    Approval is not guaranteed and is subject to the lender's terms and requirements. 
+    Not all applicants will qualify. Loan amounts, rates, and terms vary. 
+    This is not financial advice. Please review all loan terms carefully before signing. 
+    MaxLend is a tribal lender. Loans may have high APRs — borrow responsibly.
+    <br><br>
+    © 2026 BrightLane. All rights reserved.
+  </p>
+</footer>
+
+<!-- FLOATING MOBILE CTA -->
+<div class="float-cta">
+  <a href="https://www.linkconnector.com/ta.php?lc=007949096598005765&atid=MaxlendWebApplyNow" class="cta-btn" target="_blank" rel="nofollow noopener" style="font-size:15px; padding:15px 32px;">
+    ✓ Check My Eligibility →
+  </a>
+</div>
+
+<script>
+function toggleFaq(el) {
+  const item = el.parentElement;
+  const wasOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+  if (!wasOpen) item.classList.add('open');
+}
+
+// Hide floating CTA when hero CTA is visible
+const heroCta = document.querySelector('.hero .cta-btn');
+const floatCta = document.querySelector('.float-cta');
+if (heroCta && floatCta && 'IntersectionObserver' in window) {
+  const obs = new IntersectionObserver(entries => {
+    floatCta.style.opacity = entries[0].isIntersecting ? '0' : '1';
+    floatCta.style.pointerEvents = entries[0].isIntersecting ? 'none' : 'auto';
+  });
+  obs.observe(heroCta);
+}
+</script>
 </body>
 </html>
